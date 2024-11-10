@@ -1,20 +1,21 @@
-## fastify-my-plugin
 
-A simple **Fastify** plugin that adds a custom route. This plugin responds with a JSON message on the `/my-plugin-route`.
+# 🌐 fastify-my-plugin
 
-## Installation
+**fastify-my-plugin** è un plugin semplice per [Fastify](https://www.fastify.io/) che aggiunge una rotta personalizzata al tuo server. Questo plugin risponde con un messaggio JSON quando viene richiamata la rotta `/my-plugin-route`.
 
-You can install the plugin via npm:
+## 🚀 Installazione
+
+Per installare il plugin, utilizza npm:
 
 ```bash
 npm install fastify-my-plugin
 ```
 
-## Usage
+## 🛠️ Utilizzo
 
-Here's an example of how to register the plugin in your Fastify project:
+Ecco un esempio di come registrare il plugin nel tuo progetto Fastify:
 
-```js
+```javascript
 import Fastify from 'fastify';
 import myPlugin from 'fastify-my-plugin';
 
@@ -22,26 +23,26 @@ const fastify = Fastify({
   logger: true,
 });
 
-// Register the plugin
+// Registra il plugin
 fastify.register(myPlugin);
 
-// Start the server
+// Avvia il server
 fastify.listen({ port: 3000 }, (err, address) => {
   if (err) {
     fastify.log.error(err);
     process.exit(1);
   }
-  fastify.log.info(`Server listening at ${address}`);
+  fastify.log.info(`Server in ascolto su ${address}`);
 });
 ```
 
-## Features
+## ✨ Caratteristiche
 
-The plugin adds the following route to your Fastify server:
+Il plugin aggiunge la seguente rotta al tuo server Fastify:
 
-- `GET /my-plugin-route`: Responds with a JSON message.
+- `GET /my-plugin-route`: Risponde con un messaggio JSON.
 
-### Response:
+### 🌐 Esempio di Risposta:
 
 ```json
 {
@@ -49,11 +50,12 @@ The plugin adds the following route to your Fastify server:
 }
 ```
 
-## Contributing
+## 🤝 Contributi
 
-If you would like to contribute or suggest new features, feel free to open a **pull request** or create an **issue** on the project's GitHub repository.
+Se desideri contribuire o suggerire nuove funzionalità, sentiti libero di aprire una **pull request** o creare una **issue** sul repository GitHub del progetto.
 
-## License
+## 📄 Licenza
 
-This project is licensed under the **ISC License**.
+Questo progetto è distribuito sotto la licenza **ISC**.
+```
 
